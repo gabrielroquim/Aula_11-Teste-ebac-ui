@@ -3,8 +3,8 @@
 context('Funcionalidade Login', () => {
 
    beforeEach(() => {
-    cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
-       
+    //cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/') // Foi colocado o Link principal na pasta cypress.json
+       cy.visit('minha-conta')
    });
 
    afterEach(() => {
@@ -16,11 +16,11 @@ context('Funcionalidade Login', () => {
         cy.get('#password').type('teste@teste.com')
         cy.get('.woocommerce-form > .button').click()
 
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain' , "Olá, aluno_ebac")
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain' , 'Olá, aluno_ebac')
         
     });
 
-    it('Deve exiibir mensagem de usuário inválido', () => {
+    it('Deve fazer', () => {
         cy.get('#username').type('alu_ebac@teste.com')
         cy.get('#password').type('teste@teste.com')
         cy.get('.woocommerce-form > .button').click()

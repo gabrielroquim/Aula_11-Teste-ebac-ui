@@ -1,0 +1,4 @@
+{
+    "usuario": "aluno_ebac@teste.com", // no Json sempre usar aspas duplas- Quando tiver mais de um paramentro usar " , "
+    "senha": "teste@teste.com"
+}
